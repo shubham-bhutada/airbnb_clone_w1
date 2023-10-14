@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Inter;
+}
+body {
+  width: 100%;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  /* width: 90vw; */
+}
+.navbar > img {
+  width: 100px;
+}
+.navbar > ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 40%;
+}
+.navbar > ul > li {
+  list-style: none;
+}
+.navbar > ul > li > a {
+  color: var(--white, #fff);
+
+  /* text-base/Regular */
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.navbar > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar > div > p {
+  color: var(--white, #fff);
+
+  /* text-sm/Medium */
+  font-size: 14px;
+  font-weight: 500;
+}
+.navbar > div > div {
+  background: var(--white, #fff);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 100px;
+  gap: 5px;
+  padding: 5px 10px;
+}
+
+/* --------------------------------------------------------- */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding-top: 50px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 25vw;
+  height: 4vw;
+}
+.vertical-line {
+  border-right: 2px solid lightgray;
+  padding: 12px 0;
+}
+.search-bar > div:last-child {
+  background-color: #de3151;
+  border-radius: 50%;
+  padding: 5px;
+}
+.search-bar > div > h6 {
+  color: var(--black, #000);
+
+  /* text-xs/Medium */
+  /* font-size: 12px; */
+  font-size: 1vw;
+  font-weight: 600;
+}
+.search-bar > div > p {
+  color: var(--gray-500, #6b7280);
+
+  /* text-sm/Regular */
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+
+.hero {
+  background-image: url(./assets/Big\ Card.svg);
+  width: 90vw;
+  height: 30vw;
+  margin: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.hero > div > h3 {
+    color: #FFF;
+
+/* text-5xl/Medium */
+font-size: 3vw;
+font-weight: 500;
+}
+.hero > div > button {
+    width: fit-content;
+    background-color: white;
+    border: none;
+    padding: 2%;
+    border-radius: 20px;
+    font-size: 1vw;
+}
+
+/* --------------------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+  .navbar > ul {
+    /* background-color: red; */
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .navbar > div > p {
+    width: 70px;
+    font-size: 12px;
+  }
+  .navbar > div {
+    gap: 0px;
+  }
+  .navbar > div > div {
+    padding: 2px 0;
+  }
+  .navbar {
+    padding: 10px 8px;
+  }
+}
