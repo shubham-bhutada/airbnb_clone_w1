@@ -27,26 +27,32 @@
       <section class="search-bar">
         <div>
           <h6>Location</h6>
-          <p>Where are you going</p>
+          <input
+            type="text"
+            id="destination"
+            placeholder="Where are you going"
+          />
         </div>
         <div class="vertical-line"></div>
         <div>
           <h6>Check in</h6>
-          <p>Add dates</p>
+          <input type="date" id="checkIn" placeholder="Add dates" />
         </div>
         <div class="vertical-line"></div>
         <div>
           <h6>Check out</h6>
-          <p>Add dates</p>
+          <input type="date" id="checkOut" placeholder="Add dates" />
         </div>
         <div class="vertical-line"></div>
         <div>
           <h6>Guests</h6>
-          <p>Add guests</p>
+          <input type="number" id="guests" placeholder="Add guests" />
         </div>
-        <div>
-          <img src="./assets/Icon.svg" alt="search" />
-        </div>
+        <a>
+          <button id="submitSearchBtn" type="submit">
+            <img src="./assets/Icon.svg" alt="search" />
+          </button>
+        </a>
       </section>
       <section class="hero">
         <div>
@@ -55,5 +61,156 @@
         </div>
       </section>
     </section>
+    <section class="inspiration">
+      <h2>Inspiration for your next trip</h2>
+      <div class="next-trip">
+        <div id="card1">
+          <img src="./assets/guitar.png" alt="image" />
+          <div>
+            <h3>Nashville</h3>
+            <h6>53 miles away</h6>
+          </div>
+        </div>
+        <div id="card2">
+          <img src="./assets/pond.png" alt="image" />
+          <div>
+            <h3>South Haven</h3>
+            <h6>168 miles away</h6>
+          </div>
+        </div>
+        <div id="card3">
+          <img src="./assets/waterfall.png" alt="image" />
+          <div>
+            <h3>Stanton</h3>
+            <h6>192 miles away</h6>
+          </div>
+        </div>
+        <div id="card4">
+          <img src="./assets/pond.png" alt="image" />
+          <div>
+            <h3>New Buffalo</h3>
+            <h6>130 miles away</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <h2>Discover Airbnb Experiences</h2>
+      <div class="airbnb-experience">
+        <div id="dae-card1">
+          <div>
+            <h2>
+              Things to do on <br />
+              on your trip
+            </h2>
+            <button>Experiences</button>
+          </div>
+        </div>
+        <div id="dae-card2">
+          <div>
+            <h2>
+              things to do <br />
+              from home
+            </h2>
+            <button>Online Experiences</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-cards">
+      <div class="left-gift-cards">
+        <h2>
+          Shop Airbnb <br />
+          gift cards
+        </h2>
+        <button>Learn more</button>
+      </div>
+      <img src="./assets/gidtcard_airbnb.jpeg" alt="image" width="60%" />
+    </section>
+
+    <section class="hosting">
+      <h2>
+        Questions <br />
+        about <br />
+        hosting?
+      </h2>
+      <button>Ask a Superhost</button>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <ul>
+            <li>Support</li>
+            <li>Help Center</li>
+            <li>Safety Information</li>
+            <li>Cancellation options</li>
+            <li>Our COVID-19 Response</li>
+            <li>Supporting people with disabilities</li>
+            <li>Report a neighbourhood concern</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Community</li>
+            <li>Airbnb.org: disaster relief housing</li>
+            <li>Support: Afgan refugees</li>
+            <li>Celebrating diversity & belonging</li>
+            <li>Combating discriminatino</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Hosting</li>
+            <li>Try hosting</li>
+            <li>AirCover: protection for Hosts</li>
+            <li>Explore hosting resources</li>
+            <li>Visit our community forum</li>
+            <li>How to host responsibly</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>About</li>
+            <li>Newsroom</li>
+            <li>Learn about new features</li>
+            <li>Letter from our founders</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Airbnb Luxe</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <ul>
+            <li>© 2022 Airbnb, Inc.</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <div class="footer-bottom-right">
+          <ul>
+            <li>
+              <img src="./assets/globe (1).svg" alt="" />
+              <a href="#"><p>English(US)</p></a>
+            </li>
+            <li>
+              <img src="./assets/dollar-2.svg" alt="" />
+              <a href="#"><p>USD</p></a>
+            </li>
+          </ul>
+          <div class="social-handle">
+            <img src="./assets/Social Media.svg" alt="" />
+            <img src="./assets/Social Media (1).svg" alt="" />
+            <img src="./assets/Social Media (2).svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

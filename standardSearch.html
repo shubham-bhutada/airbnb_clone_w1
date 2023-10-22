@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>standard search</title>
+    <link rel="stylesheet" href="./standard.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/orange_airbnb_logo.svg" alt="logo" />
+      <div id="mid-nav">
+        <input type="text" id="destination" />
+        <div class="vertical-line"></div>
+        <input type="date" id="checkIn" />
+        <div class="vertical-line"></div>
+        <input type="date" id="checkOut" />
+        <div class="vertical-line"></div>
+        <input type="text" id="guests" />
+        <button>
+          <img src="./assets/Icon.svg" alt="" />
+        </button>
+      </div>
+      <div id="end-nav">
+        <a href="#" style="text-decoration: none"><p>Become a Host</p></a>
+        <img src="./assets/globe (1).svg" alt="" />
+        <div>
+          <img src="./assets/menu.svg" alt="" />
+          <img src="./assets/Avatar.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+    <section id="filter">
+      <button><input type="number" placeholder="Price" /></button>
+      <button><input type="text" placeholder="type of place" /></button>
+      <button>Free Cancellation</button>
+      <button>Wifi</button>
+      <button>Kitchen</button>
+      <button>Air conditioning</button>
+      <button>Washer</button>
+      <button>Iron</button>
+      <button>Dedicated workplace</button>
+      <button>Free parking</button>
+      <button>Dryer</button>
+      <button>Filters</button>
+    </section>
+
+    <section id="main">
+      <div id="cards-section"></div>
+      <div id="displayMap"></div>
+    </section>
+    <script src="standardSearch.js"></script>
+  </body>
+</html>

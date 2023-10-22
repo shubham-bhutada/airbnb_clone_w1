@@ -70,21 +70,26 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #fff;
   gap: 20px;
-  padding: 10px;
+  padding: 10px 5px 10px 15px;
   border-radius: 25vw;
-  height: 4vw;
+  height: 2%;
+  width: 70vw;
+}
+.search-bar > div > input {
+  width: 10vw;
 }
 .vertical-line {
   border-right: 2px solid lightgray;
   padding: 12px 0;
 }
-.search-bar > div:last-child {
+.search-bar > a > button {
   background-color: #de3151;
   border-radius: 50%;
-  padding: 5px;
+  padding: 1vw;
+  border: none;
 }
 .search-bar > div > h6 {
   color: var(--black, #000);
@@ -93,17 +98,28 @@ body {
   /* font-size: 12px; */
   font-size: 1vw;
   font-weight: 600;
+  padding: 5px 0 0 5px;
 }
-.search-bar > div > p {
+.search-bar > div > input {
   color: var(--gray-500, #6b7280);
 
   /* text-sm/Regular */
   font-size: 1.2vw;
   font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .hero {
   background-image: url(./assets/Big\ Card.svg);
+  background-size: cover;
   width: 90vw;
   height: 30vw;
   margin: 50px;
@@ -116,30 +132,375 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 }
 .hero > div > h3 {
-    color: #FFF;
+  color: #fff;
 
-/* text-5xl/Medium */
-font-size: 3vw;
-font-weight: 500;
+  /* text-5xl/Medium */
+  font-size: 3vw;
+  font-weight: 500;
 }
 .hero > div > button {
-    width: fit-content;
-    background-color: white;
-    border: none;
-    padding: 2%;
-    border-radius: 20px;
-    font-size: 1vw;
+  width: fit-content;
+  background-color: white;
+  border: none;
+  padding: 2%;
+  border-radius: 20px;
+  font-size: 1vw;
 }
 
+/*----------------------------------------------------------*/
+
+.inspiration {
+  width: 90vw;
+  margin: auto;
+  padding: 5% 0;
+  box-sizing: border-box;
+}
+.inspiration > h2,
+.experience > h2 {
+  color: var(--black, #000);
+
+  /* text-4xl/Medium */
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+#card1 {
+  background-color: #cc2d4a;
+  height: 350px;
+  border-radius: 10px;
+  width: 302px;
+}
+#card2 {
+  background-color: #bc1a6e;
+  height: 350px;
+  border-radius: 10px;
+  width: 302px;
+}
+#card3 {
+  background-color: #de3151;
+  height: 350px;
+  border-radius: 10px;
+  width: 302px;
+}
+#card4 {
+  background-color: #d93b30;
+  height: 350px;
+  border-radius: 10px;
+  width: 302px;
+}
+#card1 > div > h3,
+#card2 > div > h3,
+#card3 > div > h3,
+#card4 > div > h3 {
+  color: var(--white, #fff);
+
+  /* text-4xl/Medium */
+  font-size: 36px;
+  font-weight: 500;
+}
+
+#card1 > img,
+#card2 > img,
+#card3 > img,
+#card4 > img {
+  border-radius: 10px 10px 0;
+}
+
+#card1 > div > h6,
+#card2 > div > h6,
+#card3 > div > h6,
+#card4 > div > h6 {
+  color: var(--white, #fff);
+
+  /* text-lg/Regular */
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#card1 > div,
+#card2 > div,
+#card3 > div,
+#card4 > div {
+  padding: 10px;
+}
+.next-trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 2% 0;
+  margin: auto;
+}
+
+/*----------------------------------------------------------=*/
+
+.experience {
+  width: 90vw;
+  margin: auto;
+  padding: 0 0 5% 0;
+  box-sizing: border-box;
+}
+
+.airbnb-experience {
+  padding: 2% 0;
+}
+
+#dae-card1 {
+  background-image: url(./assets/dae-card1.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 45vw;
+  border-radius: 10px;
+}
+
+#dae-card2 {
+  background-image: url(./assets/dae\ card2.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 45vw;
+  border-radius: 10px;
+}
+#dae-card1 > div,
+#dae-card2 > div {
+  /* position: relative;
+  top: 50px;
+  left: 20px; */
+  padding: 10%;
+}
+
+#dae-card1 > div > h2,
+#dae-card2 > div > h2 {
+  color: #fff;
+
+  /* text-5xl/Medium */
+  /* font-size: 48px; */
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+#dae-card1 > div > button,
+#dae-card2 > div > button {
+  border: none;
+  background-color: #fff;
+  padding: 1% 2%;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 15vw;
+  font-size: 1.4vw;
+}
+
+.airbnb-experience {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 2% 0;
+  margin: auto;
+}
+
+/*---------------------------------------------------*/
+
+.gift-cards {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 10%;
+}
+
+.left-gift-cards > h2 {
+  font-size: 4vw;
+  color: var(--black, #000);
+
+  /* text-5xl/Medium */
+  /* font-size: 48px; */
+  font-weight: 500;
+}
+
+.left-gift-cards > button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: 5% 1%;
+  width: 12vw;
+  padding: 3% 4%;
+  border-radius: 5px;
+  font-size: 1.5vw;
+}
+
+/* --------------------------------------------------------- */
+
+.hosting {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  background-image: url(./assets/hosting_img.avif);
+  background-position: center;
+  background-size: contain;
+  height: 40vw;
+  margin-bottom: 10%;
+  border-radius: 10px;
+}
+
+.hosting > button {
+  color: #000;
+  background-color: #fff;
+  padding: 1% 2%;
+  margin-left: 10%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1vw;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.hosting > h2 {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 500;
+  margin-left: 10%;
+}
+/* --------------------------------------------------------- */
+
+.footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--gray-50, #f9fafb);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-wrap: wrap;
+  background: var(--gray-50, #f9fafb);
+  padding: 20px 0;
+}
+
+.footer-top > div {
+  width: 200px;
+}
+.footer-top > div > ul > li:first-child {
+  color: var(--black, #000);
+
+  /* text-base/Medium */
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.footer-top > div > ul > li {
+  color: var(--gray-00, #999da2);
+
+  /* text-sm/Regular */
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  line-height: 26px;
+  /* padding-inline: 20%; */
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+  height: 50px;
+  border-top: 1px solid lightgray;
+  margin-bottom: 2%;
+  background: var(--gray-50, #f9fafb);
+}
+.footer-bottom-left > ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-bottom-left > ul > li {
+  color: var(--gray-00, #999da2);
+}
+.footer-bottom-left > ul > li:first-child {
+  list-style: none;
+}
+.footer-bottom > div:first-child {
+  /* text-sm/Regular */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-bottom-right > ul > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 5px;
+  color: var(--gray-600, #999da2);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+.footer-bottom-right > ul > li > a > p {
+  color: var(--gray-600, #4b5563);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  text-decoration-line: underline;
+}
+.social-handle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom-right > ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 /* --------------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
   .navbar > ul {
     /* background-color: red; */
     display: none;
+  }
+  .search-bar {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .search-bar > div > h6 {
+    font-size: 1.8vw;
+  }
+  .search-bar > div > input {
+    font-size: 1.5vw;
   }
 }
 
