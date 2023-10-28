@@ -11,7 +11,7 @@ searchbtn.addEventListener("click", function () {
   const guestsValue = guests.value;
 
   const data = {
-    text: destinationValue,
+    location: destinationValue,
     startDate: startDate,
     endDate: endDate,
     guests: guestsValue,

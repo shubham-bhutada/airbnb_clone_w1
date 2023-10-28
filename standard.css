@@ -119,6 +119,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 80vh;
 }
 #cards-section {
+  padding: 20px 0px;
+  margin-top: 1%;
   flex: 3;
   /* border: 1px solid blue; */
   overflow-y: scroll;
@@ -128,6 +130,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   flex: 2;
   overflow: hidden;
   background-color: bisque;
+  color: #000;
+  padding-top: 5%;
+  text-align: center;
+  font-weight: 500;
 }
 
 /*---------------------------------------------------------*/
@@ -147,8 +153,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-top: 2px solid lightgray;
 }
 #cardImage {
-  width: 25vw;
-  min-height: 15vw;
+  min-width: 25vw;
+  height: 15vw;
   border-radius: 1vw;
   object-fit: cover;
 }
@@ -235,4 +241,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   #mid-nav > input {
     font-size: 1.5vw;
   }
+}
+
+.cardSectionHeading {
+  color: var(--gray-500, #6B7280);
+
+/* text-base/Regular */
+font-size: 1.2vw;
+font-weight: 400;
+margin: 1vw;
 }

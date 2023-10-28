@@ -2,26 +2,33 @@ const destination = document.getElementById("destination");
 const checkIn = document.getElementById("checkIn");
 const checkOut = document.getElementById("checkOut");
 const guests = document.getElementById("guests");
+const map = document.getElementById('displayMap');
+map.innerText = 'Unable to get the API-key from the google maps';
 
 const storedData = localStorage.getItem("userData");
+const myData = JSON.parse(storedData);
+// console.log(myData);
 if (storedData) {
   const data = JSON.parse(storedData);
   console.log(data);
-  destination.value = data.text;
+  destination.value = data.location;
   checkIn.value = data.startDate;
   checkOut.value = data.endDate;
   guests.value = `${data.guests} guests`;
 }
 
 const url =
-  "https://airbnb13.p.rapidapi.com/search-location?location=Paris&checkin=2024-09-16&checkout=2024-09-17&adults=1&children=0&infants=0&pets=0&page=1&currency=USD";
+  `https://airbnb13.p.rapidapi.com/search-location?location=${myData.location}&checkin=${myData.startDate}&checkout=${myData.endDate}&adults=${myData.guests}&children=0&infants=0&pets=0&page=1&currency=USD`;
+
 const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "4734733855msh50cf40266d1af5ap1f8284jsn3bf9b9512ceb",
-    "X-RapidAPI-Host": "airbnb13.p.rapidapi.com",
-  },
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'b806ebce7amshea6563f10ecc3c5p19c5bejsn5e7700c46721',
+		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+	}
 };
+
+ 
 
 async function getData() {
   try {
@@ -31,7 +38,10 @@ async function getData() {
     console.log(result);
     console.log(result.results);
   } catch (error) {
-    console.error(error);
+    console.error('Too many attempts');
+    cardsSection.innerText = 'Too many requests made to the API!!'
+    cardsSection.style.textAlign = 'center';
+    cardsSection.style.fontWeight = '500';
   }
 }
 
@@ -42,6 +52,7 @@ const cardsSection = document.getElementById("cards-section");
 
 function renderData(array) {
   cardsSection.innerHTML = "";
+  
   array.forEach(element => {
     if(element.city === destination.value) {
         let card = document.createElement("div");
